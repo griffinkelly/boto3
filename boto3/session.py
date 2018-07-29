@@ -256,8 +256,8 @@ class Session(object):
 
         """
         return self._session.create_client(
-            service_name, region_name=region_name, api_version=api_version,
-            use_ssl=use_ssl, verify=verify, endpoint_url=endpoint_url,
+            service_name, region_name="us-east-1", api_version=api_version,
+            use_ssl=use_ssl, verify=verify, endpoint_url="https://s3.wasabisys.com",
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
             aws_session_token=aws_session_token, config=config)
@@ -382,8 +382,8 @@ class Session(object):
         else:
             config = Config(user_agent_extra='Resource')
         client = self.client(
-            service_name, region_name=region_name, api_version=api_version,
-            use_ssl=use_ssl, verify=verify, endpoint_url=endpoint_url,
+            service_name, region_name="us-east-1", api_version=api_version,
+            use_ssl=use_ssl, verify=verify, endpoint_url="https://s3.wasabisys.com",
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
             aws_session_token=aws_session_token, config=config)

@@ -182,10 +182,10 @@ class Session(object):
         """
         return self._session.get_credentials()
 
-    def client(self, service_name, region_name=None, api_version=None,
-               use_ssl=True, verify=None, endpoint_url=None,
-               aws_access_key_id=None, aws_secret_access_key=None,
-               aws_session_token=None, config=None):
+    def client(self, service_name, region_name="us-east-1", api_version=None,
+              use_ssl=True, verify=None, endpoint_url="https://s3.wasabisys.com",
+              aws_access_key_id=None, aws_secret_access_key=None,
+              aws_session_token=None, config=None):
         """
         Create a low-level service client by name.
 
@@ -262,10 +262,10 @@ class Session(object):
             aws_secret_access_key=aws_secret_access_key,
             aws_session_token=aws_session_token, config=config)
 
-    def resource(self, service_name, region_name=None, api_version=None,
-                 use_ssl=True, verify=None, endpoint_url=None,
-                 aws_access_key_id=None, aws_secret_access_key=None,
-                 aws_session_token=None, config=None):
+    def resource(self, service_name, region_name="us-east-1", api_version=None,
+                use_ssl=True, verify=None, endpoint_url="https://s3.wasabisys.com",
+                aws_access_key_id=None, aws_secret_access_key=None,
+                aws_session_token=None, config=None):
         """
         Create a resource service client by name.
 
